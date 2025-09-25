@@ -1,4 +1,4 @@
-# 🎈 Blank app template
+# 🍎 Stremlit in Conduit Apples Demo
 
 A simple Streamlit app template for you to modify!
 
