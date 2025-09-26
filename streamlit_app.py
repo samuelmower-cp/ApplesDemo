@@ -103,9 +103,9 @@ donut = alt.Chart(org_cnv).mark_arc(innerRadius=50).encode(
 
 # Display metrics + donut in a single row
 c1, c2, c3, c4 = st.columns([1,1,1,1])
-c1.metric("Dollars", format_metric(total_dollars), f"{pct_dollars:.1%} vs YA")
-c2.metric("Units", format_metric(total_units), f"{pct_units:.1%} vs YA")
-c3.metric("Pounds", format_metric(total_pounds, "lbs"), f"{pct_pounds:.1%} vs YA")
+c1.metric("Dollars", format_metric(total_dollars), f"{pct_dollars:.1%} YoY")
+c2.metric("Units", format_metric(total_units), f"{pct_units:.1%} YoY")
+c3.metric("Pounds", format_metric(total_pounds), f"{pct_pounds:.1%} YoY")
 c4.altair_chart(donut, use_container_width=True)
 
 # Layout: line chart full width
