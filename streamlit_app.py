@@ -4,9 +4,9 @@ from datetime import timedelta
 import altair as alt
 
 
-st.title("🍎 Stremlit in Conduit")
+st.title("🍎 Streamlit in Conduit")
 st.write(
-    "Testing how to run a Stremlit app in CP Conduit"
+    "Testing how to run a Streamlit app in CP Conduit"
 )
 
 
