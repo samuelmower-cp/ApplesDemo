@@ -93,11 +93,11 @@ org_cnv.columns = ['Type','Count']
 
 color_scale = alt.Scale(domain=['ORG','CNV'], range=['#099C6F','#E1A528'])
 
-donut = alt.Chart(org_cnv).mark_arc(innerRadius=50).encode(
+donut = alt.Chart(org_cnv).mark_arc(innerRadius=30).encode(
     theta=alt.Theta(field='Count', type='quantitative'),
     color=alt.Color('Type:N', scale=color_scale, legend=alt.Legend(title="ORG vs CNV"))
 ).properties(
-    width=300,
+    width=100,
     height=200
 )
 
@@ -106,7 +106,7 @@ c1, c2, c3, c4 = st.columns([1,1,1,1])
 c1.metric("Dollars", format_metric(total_dollars), f"{pct_dollars:.1%} YoY")
 c2.metric("Units", format_metric(total_units), f"{pct_units:.1%} YoY")
 c3.metric("Pounds", format_metric(total_pounds), f"{pct_pounds:.1%} YoY")
-c4.altair_chart(donut, use_container_width=True)
+c4.altair_chart(donut, use_container_width=False)
 
 # Layout: line chart full width
 line_chart_df = df.groupby('Periods')[['$', '$ Ya']].sum().reset_index()
